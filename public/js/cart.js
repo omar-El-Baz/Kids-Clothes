@@ -61,7 +61,11 @@ function saveCart() {
 
 // Navigate to the checkout page
 function goToCheckout() {
-    window.location.href = "checkout.html";
+  if (cartData.length === 0) {
+        alert("Your cart is empty. Please add items before proceeding to checkout.");
+    } else {
+        window.location.href = "checkout.html";
+    }
 }
 
 // Initialize the page by rendering the cart
