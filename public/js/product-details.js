@@ -16,7 +16,7 @@ function addToCart() {
    } else {
        alert(`${product.title} is already in your cart.`);
    }
-  localStorage.setItem("cart", JSON.stringify(mycart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 
    console.log("Cart:", cart); 
 }
