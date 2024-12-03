@@ -12,7 +12,7 @@ document.getElementById("loginBtn").addEventListener("submit", function(event) {
         // Successful login
         alert("Login successful!");
         // Redirect to another page or dashboard
-        window.location.href = "dashboard.html"; // Example redirect
+window.location.href = "../../../index.html";
     } else {
         // Show an error message
         alert("Please enter a valid email and password.");
