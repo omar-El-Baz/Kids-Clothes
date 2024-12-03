@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // wishlist, orders, and sign Out
     document.getElementById('wishlist-btn').addEventListener('click', () => {
-        window.location.href = 'src/views/wishlist.html'; 
+        window.location.href = './src/views/wishlist.html'; 
     });
 
     document.getElementById('orders-btn').addEventListener('click', () => {
