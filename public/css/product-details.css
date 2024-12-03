@@ -47,22 +47,7 @@ body {
     margin-bottom: 15px;
     color: #444;
 }
-.product-rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
- 
-.stars {
-    color: #ffc107;
-    font-size: 1.5rem;
-}
- 
-.review-count {
-    margin-left: 5px;
-    font-size: 1rem;
-    color: #888;
-}
+
 .product-price {
     margin-bottom: 15px;
 }
