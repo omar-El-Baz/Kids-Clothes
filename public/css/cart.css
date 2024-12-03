@@ -171,7 +171,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Checkout Styles */
 .checkout-container {
-    background: var(--beige);
+    background: #fffaf0;
     border: 1px solid var(--muted-green);
     padding: 50px;
     border-radius: 8px;
