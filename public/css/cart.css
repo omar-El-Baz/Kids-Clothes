@@ -192,10 +192,10 @@ input:focus {
 /* Cindy Boho-inspired Colors */
 :root {
     --beige: #f5f5dc;
-    --terracotta: #d9673d;
+    --terracotta: #6C4E31;
     --muted-green: #b2a682;
-    --peach: #ffe5b4;
-    --soft-cream: #fffaf0;
+    /* --peach: #ffe5b4; */
+    /* --soft-cream: #fffaf0; */
 }
 
 /* General Styles */
@@ -274,13 +274,15 @@ button:hover {
 }
 /* Checkout Container */
 .checkout-container {
-    background: var(--beige);
+    background: #F9E0C7;
+    /* background: var(--beige); */
     border: 1px solid var(--muted-green);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 400px;
+    /* background: #F9E0C7; */
 }
 
 .checkout-container h1 {
@@ -305,10 +307,11 @@ button:hover {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--muted-green);
+    /* border: 1px solid var(--muted-green); */
     border-radius: 5px;
-    background-color: var(--soft-cream);
-    color: var(--terracotta);
+    /* background-color: var(--soft-cream); */
+    /* color: var(--terracotta); */
+    /* background: #F9E0C7; */
 }
 
 .total-display {
@@ -331,6 +334,7 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    background: #6C4E31;
 }
 
 .submit-btn:hover {
