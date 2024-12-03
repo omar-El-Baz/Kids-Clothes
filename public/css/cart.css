@@ -1,0 +1,339 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.checkout-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+/* Shared Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* My Cart Styles */
+.cart-container, .checkout-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-total {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkout-btn, .submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover, .submit-btn:hover {
+    background: #0056b3;
+}
+
+/* Checkout Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.add-item-container {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.add-item-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#add-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-item-form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#add-item-form button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#add-item-form button:hover {
+    background: #218838;
+}
+/* Cindy Boho-inspired Colors */
+:root {
+    --beige: #f5f5dc;
+    --terracotta: #d9673d;
+    --muted-green: #b2a682;
+    --peach: #ffe5b4;
+    --soft-cream: #fffaf0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--soft-cream);
+    color: var(--muted-green);
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container, .add-item-container, .promo-container {
+    background: var(--beige);
+    border: 1px solid var(--muted-green);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.cart-container h1,
+.add-item-container h2,
+.promo-container h2 {
+    color: var(--terracotta);
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    background-color: var(--terracotta);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--peach);
+    color: var(--terracotta);
+}
+
+/* Cart Items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--muted-green);
+}
+
+.cart-item span {
+    font-weight: bold;
+    color: var(--terracotta);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Special Promo Item */
+.promo-container {
+    background: var(--peach);
+    border: 1px solid var(--terracotta);
+}
+
+.promo-btn {
+    background: var(--terracotta);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+/* Checkout Container */
+.checkout-container {
+    background: var(--beige);
+    border: 1px solid var(--muted-green);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.checkout-container h1 {
+    color: var(--terracotta);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--muted-green);
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--muted-green);
+    border-radius: 5px;
+    background-color: var(--soft-cream);
+    color: var(--terracotta);
+}
+
+.total-display {
+    margin: 20px 0;
+    font-size: 18px;
+    color: var(--terracotta);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Place Order Button */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--terracotta);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: var(--peach);
+    color: var(--terracotta);
+}
