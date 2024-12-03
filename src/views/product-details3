@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<link rel="stylesheet" href="../../public/css/product-details.css">
+</head>
+<body>
+<div class="product-page">
+<div class="product-image">
+<img src="../../public/images/joggers.jpg" alt="joggers">
+</div>
+<div class="product-details">
+<h1 class="product-title">Comfy Boys joggers</h1>
+<p>Material: Cotton</p>
+
+<p class="product-price">
+<span class="current-price">745.00 EGP</span>
+<span class="original-price">1,000.00 EGP</span>
+<span class="discount">Save 25%</span>
+</p>
+<div class="size-selection">
+<p>Choose Size</p>
+<button class="size-button">5-6</button>
+<button class="size-button">7-8</button>
+<button class="size-button">9-10</button>
+<button class="size-button">11-12</button>
+</div>
+<button class="order-button" id="addToCart">ADD TO CART</button>
+<button class="order-button" id="addToFavorite">ADD TO FAVORITE</button>
+<label for="size-chart" class="size-chart-button">Size Chart</label>
+<input type="checkbox" id="size-chart" class="size-chart-checkbox">
+<div class="size-chart-modal">
+<label for="size-chart" class="close">&times;</label>
+<img class="size-chart-image" src="../../public/images/size-chart.jpg" alt="Size Chart">
+</div>
+<div class="product-info">
+<p><strong>Limited Offer:</strong> Free Delivery</p>
+<p><strong>Guaranteed:</strong> Return & Exchange Policy</p>
+</div>
+</div>
+</div>
+<script src="product-details.js"></script>
+</body>
+</html>
