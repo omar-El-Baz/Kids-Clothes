@@ -1,1 +1,212 @@
+*{
+	padding-top: 0%;
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-top: 0%;
+}
+body{
+    background-color: #FFDBB5;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+header {
+    background-color: #603F26;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#HeadingTwo {
+	display: flex;
+	background-color: #AB886D;
+	width: 100%;
+	gap: 30px;
+	justify-content: space-between;
+	align-items: center;
+}
+#lists {
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	width: 620px;
+	font-size: 30px;
+	gap: 30px;
+	padding-top: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+	color: #6C4E31;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+	width: 13%;
+	cursor: pointer;
+	text-align: center;
+	font-weight: bold;
+	font-size: 42px;
+    padding-top: 20px;
+	margin-left: 20px;
+	color: #603F26;
+	letter-spacing: 7px;
+}
+#headerIcons {
+	display: flex;
+	width: 800px;
+	justify-content:flex-start;
+	gap: 20px;
+}
+.icons {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	margin-top: 3px;
+	padding: 10px;
+	margin-left: 10px;
+}
+img{
+	width: 100%;
+}
+.iconColor img {
+    width: 30px;
+    height: 30px;
+}
+
+.prodCount {
+	font-size: 20px;
+    background-color:bisque;
+    color: #603F26;
+    border-radius: 30%;
+    font-size: 15px;
+    padding: 5px;
+	position: absolute;
+	border-color: #603F26;
+}
+.colorChange:hover {
+	color: black;
+}
+.iconColor:hover {
+	background-color: bisque;
+}
+#loginMenu {
+	display: flex;
+    width: 700px;
+    justify-content: left;
+	justify-items: flex-start;
+}
+#user:hover > #loginMenu {
+	display: block;
+	position: absolute;
+	padding: 1%;
+	background-color: white;
+}
+#user > #loginMenu > li {
+	list-style-type:none;
+	margin-bottom: 12px;
+}
+#user > #loginMenu > li > a {
+	text-decoration:#603F26;
+	color:#603F26 ;
+	text-align: center;
+}
+
+#container {
+	display: flex;
+	width: 1000px;
+	margin: auto;
+	gap: 30px;
+	padding-bottom: 30px;
+	height: 700px;
+	margin-top: 10px;
+    color:#603F26;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+#login {
+	width: 40%;
+	height: 100%;
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #603F26;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.button {
+	margin-top: 20px;
+	width: 100%;
+	background-color: #FFDBB5;
+	color: #603F26;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	justify-content: flex-end;
+	align-items: center;
+}
+.button:hover {
+	background-color: rgb(87, 84, 84);
+}
+.userInput {
+	width: 97.5%;
+	height: 30px;
+}
+.text {
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #6C4E31;
+}
+#loginBtn > select {
+	margin-bottom: 25px;
+}
+#loginBtn > div {
+	margin-bottom: 22px;
+}
+#forgetPassword {
+	color: #603F26;
+	text-align: center;
+	font-size: 14px;
+}
+#forgetPassword:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: black;
+}
+#gmail,
+#facebook {
+	border: 1px solid #6C4E31;
+	display: flex;
+	height: 50px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+#gmail > div,
+#facebook > div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+#gmail > div + div,
+#facebook > div + div {
+	width: 180px;
+	margin-left: 45px;
+	font-size: 20px;
+	padding-top: 5px;
+	color: #6C4E31;
+}
+#facebook > div + div {
+	margin-left: 34.5px;
+	width: 200px;
+}
+#gmail:hover,
+#facebook:hover {
+	background-color: #AB886D;
+}
 
