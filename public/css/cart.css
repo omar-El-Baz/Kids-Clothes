@@ -47,7 +47,7 @@ input:focus {
 }
 
 .submit-btn {
-    background: #A67B5B;
+    background-color: #A67B5B;
     color: white;
     padding: 10px;
     border: none;
@@ -58,7 +58,7 @@ input:focus {
 }
 
 .submit-btn:hover {
-    background: #6C4E31;
+    background-color: #6C4E31;
 }
 /* Shared Styles */
 body {
@@ -108,7 +108,7 @@ h1 {
 }
 
 .checkout-btn, .submit-btn {
-    background: #A67B5B;
+    background-color: #A67B5B;
     color: white;
     padding: 10px;
     border: none;
@@ -120,7 +120,7 @@ h1 {
 }
 
 .checkout-btn:hover, .submit-btn:hover {
-    background: #6C4E31;
+    background-color: #6C4E31;
 }
 
 /* Checkout Styles */
