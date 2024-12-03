@@ -1,6 +1,5 @@
 let wishlist = [];
-let cart = [];
-let mycart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const addToCartButton = document.getElementById('addToCart');
 const addToFavoriteButton = document.getElementById('addToFavorite');
@@ -11,12 +10,12 @@ const product = {
 };
 function addToCart() {
    if (!cart.some(item => item.title === product.title)) {
-       cart.push(product);
+       cart.push(product); 
+        localStorage.setItem("cart", JSON.stringify(cart));
        alert(`${product.title} has been added to your cart.`);
    } else {
        alert(`${product.title} is already in your cart.`);
    }
-  localStorage.setItem("cart", JSON.stringify(cart));
 
    console.log("Cart:", cart); 
 }
