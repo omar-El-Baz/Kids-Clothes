@@ -3,61 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/signup.css" />
-    <title>SignUp</title>
+    <link rel="stylesheet"href="../../../public/css/login-signup.css"/>
+    <title>Sign Up</title>
 </head>
 <body>
-    <div id="signUp">
-        <!-- Sign Up Form -->
-        <form id="logInBtn">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required />
+    <header>
+        <div id="HeadingTwo">
+            <div id="lists">
+                <span id="kids"class="colorChange">BOYS</span>
+                <span id="kids"class="colorChange">GIRLS</span>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required />
-            </div>
-            <div class="form-group">
-                <label for="cPassword">Confirm Password</label>
-                <input type="password" id="cPassword" placeholder="Confirm your password" required />
-            </div>
-            <div class="form-group">
-                <label for="country">Region</label>
-                <select id="country" required>
-                    <option value="">Select your region</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="AU">Australia</option>
-                </select>
-            </div>
-            <div id="privacyAndAgreement">
-                <div>
-                    <input type="checkbox" required />
-                </div>
-                <div>
-                    I agree to the
-                    <a href="#" target="_blank">Privacy & Cookie Policy</a> and
-                    <a href="#" target="_blank">Terms & Conditions</a>.
+            <div id="logo">JUNIOR JUNGLE </div>
+            <div id="headerIcons">
+                <div class="icons iconColor"id="Sign Up">
+                  <a href="./signup.html"><img src="../../../public/images/add-user.png"alt="Sign Up"/>
                 </div>
             </div>
-            <input class="buttont" type="submit" value="REGISTER" />
-        </form>
-
-        <!-- Social Login Options -->
-        <div class="social-login">
-            <button id="gmail">Login with Gmail</button>
-            <button id="facebook">Login with Facebook</button>
         </div>
-
-        <!-- Forgot Password -->
-        <div>
-            <a href="#" id="forgetPassword">Forgot Password?</a>
+    </header>
+    <div id="container">
+        <div id="logIn">
+            <h2>New To JUNIOR JUNGLE</h2>
+            <form id="logInBtn">
+                <label class="text">region: </label>
+                <select id="country"required>
+                    <option value="">--SELECT--</option>
+						<option value="United States">United States</option>
+						<option value="United Kingdom">United Kingdom</option>
+						<option value="Egypt">Egypt</option>
+						<option value="India">India</option>
+						<option value="South Korea">South Korea</option>
+						<option value="Australia">Australia</option>
+						<option value="New Zealand">New Zealand</option>
+						<option value="Thailand">Thailand</option>
+                </select>
+                <div>
+                    <label class="text">Email Address: </label><br/>
+                    <input id="email"class="userInput"type="email"required/>
+                </div>
+                <div>
+                    <label class="text" >password: </label><br/>
+                    <input id="password"class="userInput"type="password"required/>
+                </div>
+                <div>
+                    <label class="text">confirm password:</label><br/>
+                    <input id="cPassword" class="userInput" type="password" required />
+                </div>
+				
+				
+			</div>
+			<div id="vertLine"></div>
+			<div id="signUp">
+                <div id="privacyAndAgreement">
+                    <div>
+                        <input type="checkbox" required />
+                    </div>
+                    <div>
+                        l agree to the
+                        <a href="#" target="_blank">Privacy & Cookie Policy</a> and
+                        <a href="#" target="_blank">Terms & Conditions</a>.
+                    </div>
+                </div>
+                <input class="buttont"type="submit"value="REGISTER"/>
+            </form>
         </div>
     </div>
-
-    <!-- Link to external JavaScript file -->
-    <script src="../public/js/signup.js"></script>
 </body>
+<script src="../../public/js/login-signup.js"></script>
 </html>
