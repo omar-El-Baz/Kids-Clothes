@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Elegant Header</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #D1BB9E;
+            border-bottom: 1px solid #A79277;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            width: 98%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .icon-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .icon-dropdown a {
+            color: #333;
+            padding: 5px 10px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .icon-dropdown a:hover {
+            background-color: white;
+            color: #007bff;
+        }
+
+        .icon:hover .icon-dropdown {
+            display: block;
+            width: 100px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            background-color: #D1BB9E;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .categories .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .categories .dropdown .dropbtn {
+            background-color: white;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .categories .dropdown .dropbtn:hover {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .categories .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .categories .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .categories .dropdown-content a:hover {
+            background-color: white;
+        }
+
+        .categories .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .carousel-inner {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../../../index.html"><img src="../../../public/images/baby-boy.svg" alt="Logo"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img src="../../../public/images/user.svg" width="30" height="30">
+                <div class="icon-dropdown">
+                    <a href="../user/profile.html">profile</a>
+                    <a href="../user/orders.html">orders</a>
+                </div>
+            </div>
+            <div class="icon"><a href="../auth/"><img src="../../../public/images/login.png"
+                        width="30" height="30"> </a></div>
+            <div class="icon"><a href="../wishlist.html"><img src="../../../public/images/e-commerce.svg" width="30"
+                        height="30"> </a></div>
+            <div class="icon"><a href="../cart.html"><img
+                        src="../../../public/images/shopping-cart.svg" width="30" height="30"> </a></div>
+        </div>
+    </header>
+    <nav class="categories">
+        <div class="dropdown">
+            <button class="dropbtn">Boys</button>
+            <div class="dropdown-content">
+                <a href="../filter.html">T-Shirts</a>
+                <a href="../filter.html">Shorts</a>
+                <a href="../filter.html">Accessories</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Girls</button>
+            <div class="dropdown-content">
+                <a href="../filter.html">Dresses</a>
+                <a href="../filter.html">Skirts</a>
+                <a href="../filter.html">Accessories</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
