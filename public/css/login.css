@@ -210,3 +210,12 @@ form {
 	background-color: #AB886D;
 }
 
+.loginButton {
+    background-color: #A67B5B;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
