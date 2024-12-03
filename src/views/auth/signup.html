@@ -3,63 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href="../../../public/css/login-signup.css"/>
+    <link rel="stylesheet" href="../../../public/css/login-signup.css"/>
     <title>Sign Up</title>
 </head>
 <body>
     <header>
         <div id="HeadingTwo">
             <div id="lists">
-                <span id="kids"class="colorChange">BOYS</span>
-                <span id="kids"class="colorChange">GIRLS</span>
+                <span id="kids" class="colorChange">BOYS</span>
+                <span id="kids" class="colorChange">GIRLS</span>
             </div>
-            <div id="logo">JUNIOR JUNGLE </div>
+            <div id="logo">JUNIOR JUNGLE</div>
             <div id="headerIcons">
-                <div class="icons iconColor"id="Login">
-                  <a href="./login.html"><img src="../../../public/images/login.png"alt="Sign Up"/>
+                <div class="icons iconColor" id="Login">
+                    <a href="./login.html"><img src="../../../public/images/login.png" alt="Login" /></a>
                 </div>
             </div>
         </div>
     </header>
+
     <div id="container">
         <div id="logIn">
             <h2>New To JUNIOR JUNGLE</h2>
             <form id="logInBtn">
                 <label class="text">Region: </label>
-                <select id="country"required>
+                <select id="country" required>
                     <option value="">--SELECT--</option>
-						<option value="United States">United States</option>
-						<option value="United Kingdom">United Kingdom</option>
-						<option value="Egypt">Egypt</option>
-						<option value="India">India</option>
-						<option value="South Korea">South Korea</option>
-						<option value="Australia">Australia</option>
-						<option value="New Zealand">New Zealand</option>
-						<option value="Thailand">Thailand</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="India">India</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Thailand">Thailand</option>
                 </select>
+
                 <div>
                     <label class="text">Email Address: </label><br/>
-                    <input id="email"class="userInput"type="email"required/>
+                    <input id="email" class="userInput" type="email" required />
                 </div>
+
                 <div>
-                    <label class="text" >Password: </label><br/>
-                    <input id="password"class="userInput"type="password"required/>
+                    <label class="text">Password: </label><br/>
+                    <input id="password" class="userInput" type="password" required />
                 </div>
+
                 <div>
-                    <label class="text">Confirm Password:</label><br/>
+                    <label class="text">Confirm Password: </label><br/>
                     <input id="cPassword" class="userInput" type="password" required />
                 </div>
-				
-				
-			</div>
-			<div id="vertLine"></div>
-		
+
+                <div id="privacyAndAgreement">
+                    <div>
+                        <input type="checkbox" required />
+                    </div>
+                    <div>
+                        I agree to the
+                        <a href="#" target="_blank">Privacy & Cookie Policy</a> and
+                        <a href="#" target="_blank">Terms & Conditions</a>.
+                    </div>
+                </div>
+
                 <div>
-                    <button type="submit" class="loginButton">Sign Up </button>
+                    <button type="submit" class="loginButton">Sign Up</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="../../../public/js/signup.js"></script>
 </body>
-<script src="../../../public/js/signup.js"></script>
 </html>
