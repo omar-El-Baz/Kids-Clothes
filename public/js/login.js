@@ -1,59 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    
-    const form = document.getElementById('loginBtn');
-    const emailField = document.getElementById('email');
-    const passwordField = document.getElementById('password');
-    const cPasswordField = document.getElementById('cPassword');
-    const countryField = document.getElementById('country');
-    const forgetPasswordLink = document.getElementById('forgetPassword');
-    const signupButton = document.querySelector('.buttont');
+// login.js
 
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
+document.getElementById("loginBtn").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevents the form from submitting
 
-    
-        if (countryField.value === "") {
-            alert("Please select a region.");
-            return;
-        }
+    // Get the values from the email and password input fields
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
-        
-        const email = emailField.value;
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return;
-        }
-
-        const password = passwordField.value;
-        const confirmPassword = cPasswordField.value;
-        if (password !== confirmPassword) {
-            alert("Passwords do not match.");
-            return;
-        }
-
-        alert("Registration successful!");
-        form.reset();
-    });
-
-    forgetPasswordLink.addEventListener('click', function() {
-        alert("Redirecting to password recovery page...");
-        
-    });
-
-    const gmailLogin = document.getElementById('gmail');
-    const facebookLogin = document.getElementById('facebook');
-
-    gmailLogin.addEventListener('click', function() {
-        alert("Redirecting to Gmail login...");
-        
-    });
-
-    facebookLogin.addEventListener('click', function() {
-        alert("Redirecting to Facebook login...");
-        
-    });
+    // Basic validation
+    if (validateEmail(email) && password !== "") {
+        // Successful login
+        alert("Login successful!");
+        // Redirect to another page or dashboard
+        window.location.href = "dashboard.html"; // Example redirect
+    } else {
+        // Show an error message
+        alert("Please enter a valid email and password.");
+    }
 });
 
+// Function to validate email format using regex
+function validateEmail(email) {
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailPattern.test(email);
+}
