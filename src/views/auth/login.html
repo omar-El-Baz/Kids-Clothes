@@ -1,1 +1,80 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="login.css"/>
+    <title>Log In</title>
+</head>
+<body>
+    <header>
+        <div id="HeadingTwo">
+            <div id="lists">
+                <span id="kids"class="colorChange">BOYS</span>
+                <span id="kids"class="colorChange">GIRLS</span>
+            </div>
+            <div id="logo">JUNIOR JUNGLE</div>
+            <div id="headerIcons">
+                <div class="icons iconColor"id="Sign Up">
+                    <img src="C:\Users\20106\Desktop\project1\add-user.png"alt="login"/>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <div id="login">
+            <h2>New To JUNIOR JUNGLE</h2>
+            <form id="loginBtn">
+                <label class="text">region: </label>
+                <select id="country"required>
+                    <option value="">--SELECT--</option>
+						<option value="United States">United States</option>
+						<option value="United Kingdom">United Kingdom</option>
+						<option value="Egypt">Egypt</option>
+						<option value="India">India</option>
+						<option value="South Korea">South Korea</option>
+						<option value="Australia">Australia</option>
+						<option value="New Zealand">New Zealand</option>
+						<option value="Thailand">Thailand</option>
+                </select>
+                <div>
+                    <label class="text">Email Address: </label><br/>
+                    <input id="email"class="userInput"type="email"required/>
+                </div>
+                <div>
+                    <label class="text" >password: </label><br/>
+                    <input id="password"class="userInput"type="password"required/>
+                </div>
+                <div>
+                    <label class="text">confirm password:</label><br/>
+                    <input id="cPassword" class="userInput" type="password" required />
+                </div>
+                <p id="forgetPassword">Forgot your password?</p>
+				<div id="or">
+					<div></div>
+					<p>Or</p>
+					<div></div>
+				</div>
+				<div id="gmail">
+					<div>
+						<img src="C:\Users\20106\Desktop\project1\gmail.png" alt="" />
+					</div>
+					<div>
+						Log In With gmail
+					</div>
+				</div>
+				<div id="facebook">
+					<div>
+						<img src="C:\Users\20106\Desktop\project1\facebook.png" alt="" />
+					</div>
+					<div>
+						Log In With Facebook
+					</div>
+				</div>
+			</div>
+			<div id="vertLine"></div>
+			
+    </div>
+</body>
+<script src="login.js"></script>
+</html>
