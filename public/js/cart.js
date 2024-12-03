@@ -13,16 +13,30 @@ function renderCart() {
         const li = document.createElement("li");
         li.className = "cart-item";
         li.innerHTML = `
-            <span>${item.name}</span>
+            <span>${item.title}</span>
             <span>$${item.price.toFixed(2)}</span>
+            <input type="number" class="quantity-input" min="1" value="${item.quantity}" 
+                   onchange="updateQuantity(${index}, this.value)">
+            <span>Subtotal: $${(item.price * item.quantity).toFixed(2)}</span>
             <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         `;
         cartItemsContainer.appendChild(li);
-        total += item.price;
+        total += item.price * item.quantity;
     });
 
     cartTotalElement.textContent = `$${total.toFixed(2)}`;
     saveCart();
+}
+
+// Function to update the quantity of an item
+function updateQuantity(index, newQuantity) {
+    newQuantity = parseInt(newQuantity);
+    if (newQuantity > 0) {
+        cartData[index].quantity = newQuantity;
+        renderCart();
+    } else {
+        alert("Quantity must be 1 or greater.");
+    }
 }
 
 // Function to add a new item to the cart
@@ -31,21 +45,15 @@ function addItem(event) {
 
     const itemName = document.getElementById("item-name").value.trim();
     const itemPrice = parseFloat(document.getElementById("item-price").value);
+    const itemQuantity = parseInt(document.getElementById("item-quantity").value);
 
-    if (itemName && !isNaN(itemPrice)) {
-        cartData.push({ name: itemName, price: itemPrice });
+    if (itemName && !isNaN(itemPrice) && itemQuantity > 0) {
+        cartData.push({ name: itemName, price: itemPrice, quantity: itemQuantity });
         renderCart();
         document.getElementById("add-item-form").reset(); // Clear the form
     } else {
-        alert("Please enter a valid name and price.");
+        alert("Please enter a valid name, price, and quantity.");
     }
-}
-
-// Function to add the promotional item to the cart
-function addPromoItem() {
-    const promoItem = { name: "Limited Edition Product", price: 25.0 };
-    cartData.push(promoItem);
-    renderCart();
 }
 
 // Function to remove an item from the cart
@@ -61,7 +69,7 @@ function saveCart() {
 
 // Navigate to the checkout page
 function goToCheckout() {
-  if (cartData.length === 0) {
+    if (cartData.length === 0) {
         alert("Your cart is empty. Please add items before proceeding to checkout.");
     } else {
         window.location.href = "checkout.html";
@@ -72,4 +80,4 @@ function goToCheckout() {
 renderCart();
 
 // Add event listener for the Add Item form
-document.getElementById("add-item-form").addEventListener("submit", addItem);
+do
