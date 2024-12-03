@@ -1,28 +1,36 @@
-// login-signup.js
+// signup.js
 
 document.getElementById("logInBtn").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent the form from submitting the default way
+    event.preventDefault();  // Prevent form submission
 
-    // Get values from the form fields
+    // Get the form input values
     var region = document.getElementById("country").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("cPassword").value;
 
-    // Check if all required fields are filled
+    // Validate required fields
     if (region === "" || email === "" || password === "" || confirmPassword === "") {
         alert("Please fill out all fields.");
-        return;  // Stop further execution if validation fails
+        return;
     }
 
-    // Check if the passwords match
+    // Check if passwords match
     if (password !== confirmPassword) {
         alert("Passwords do not match.");
         return;
     }
 
+    // Validate email format
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
     // Successful registration
     alert("Registration successful!");
+
     // Redirect to the index.html page
-    window.location.href = "../../../index.html";  // Adjust the path as necessary
+    window.location.href = "../../../index.html";  // Adjust the path if needed
 });
