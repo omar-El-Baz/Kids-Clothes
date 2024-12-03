@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
     document.getElementById('sign-out-btn').addEventListener('click', () => {
-        window.location.href = 'signin.html';
+        window.location.href = '../../../index.html';
     });
 
 });
