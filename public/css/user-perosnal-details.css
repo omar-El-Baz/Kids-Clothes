@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF2E1;
+}
+
+header {
+    background-color: #6C4E31;
+    color: #EAD8C0;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6C4E31;
+    color: #FFF2E1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#personal-details {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #D1BB9E;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #6C4E31;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Option Container */
+.option {
+    background-color: #F9E0C7;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.option h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #6C4E31;
+}
+
+.option p {
+    color: #5C4A33;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    background-color: #A67B5B;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #6C4E31;
+}
+
+
+.highlight {
+    background-color: #A67B5B;
+}
+
+.highlight:hover {
+    background-color: #6C4E31;
+}
+
+#save-name-btn, #save-email-btn, #save-address-btn {
+    background-color: #A67B5B;
+}
+
+#save-name-btn:hover, #save-email-btn:hover, #save-address-btn:hover {
+    background-color: #6C4E31;
+}
+
+/* wishlist orders and sign Out Buttons */
+#wishlist-btn, #orders-btn, #settings-btn, #sign-out-btn {
+    background-color: #A67B5B;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+#wishlist-btn:hover, #orders-btn:hover, #settings-btn:hover, #sign-out-btn:hover {
+    background-color: #6C4E31;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    #personal-details {
+        padding: 1rem;
+    }
+}
