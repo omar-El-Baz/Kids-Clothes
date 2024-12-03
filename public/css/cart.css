@@ -37,34 +37,6 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* Form Styles */
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--muted-green);
-    margin-bottom: 5px;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid var(--muted-green);
-    border-radius: 4px;
-    background-color: var(--soft-cream);
-    color: var(--terracotta);
-}
-
-input:focus, select:focus {
-    border-color: var(--terracotta);
-    outline: none;
-}
-
 /* Buttons */
 button, .submit-btn, .checkout-btn {
     background-color: var(--terracotta);
@@ -83,9 +55,43 @@ button:hover, .submit-btn:hover, .checkout-btn:hover {
     color: var(--terracotta);
 }
 
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--muted-green);
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--muted-green);
+    border-radius: 4px;
+    background-color: var(--soft-cream);
+    color: var(--terracotta);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--terracotta);
+    outline: none;
+}
+
 /* Cart Container */
 .cart-container {
+    background: var(--beige);
     border: 1px solid var(--muted-green);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
 }
 
 .cart-item {
@@ -104,4 +110,87 @@ button:hover, .submit-btn:hover, .checkout-btn:hover {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    font-weight: b
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Add Item Container */
+.add-item-container {
+    background: var(--soft-cream);
+    border: 1px solid var(--muted-green);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.add-item-container h2 {
+    color: var(--terracotta);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.add-item-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-item-container input, 
+.add-item-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--muted-green);
+    border-radius: 4px;
+    background-color: var(--soft-cream);
+    color: var(--terracotta);
+}
+
+.add-item-container input:focus, 
+.add-item-container textarea:focus {
+    border-color: var(--terracotta);
+    outline: none;
+}
+
+.add-item-container button {
+    background: var(--terracotta);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-item-container button:hover {
+    background: var(--peach);
+    color: var(--terracotta);
+}
+
+/* Checkout Styles */
+.checkout-container {
+    background: var(--beige);
+    border: 1px solid var(--muted-green);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.checkout-container h1 {
+    color: var(--terracotta);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Total Display */
+.total-display {
+    margin: 20px 0;
+    font-size: 18px;
+    color: var(--terracotta);
+    display: flex;
+    justify-content: space-between;
+}
