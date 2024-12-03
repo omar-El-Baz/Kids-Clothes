@@ -1,5 +1,7 @@
 let wishlist = [];
 let cart = [];
+let mycart = JSON.parse(localStorage.getItem("cart")) || [];
+
 const addToCartButton = document.getElementById('addToCart');
 const addToFavoriteButton = document.getElementById('addToFavorite');
 const product = {
@@ -14,6 +16,8 @@ function addToCart() {
    } else {
        alert(`${product.title} is already in your cart.`);
    }
+  localStorage.setItem("cart", JSON.stringify(mycart));
+
    console.log("Cart:", cart); 
 }
 function addToWishlist() {
