@@ -3,24 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href="../public/css/signup.css"/>
+    <link rel="stylesheet" href="../public/css/signup.css" />
     <title>SignUp</title>
 </head>
 <body>
     <div id="signUp">
-        <div id="privacyAndAgreement">
-            <div>
-                <input type="checkbox" required />
+        <!-- Sign Up Form -->
+        <form id="logInBtn">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
             </div>
-            <div>
-                l agree to the
-                <a href="#" target="_blank">Privacy & Cookie Policy</a> and
-                <a href="#" target="_blank">Terms & Conditions</a>.
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
             </div>
+            <div class="form-group">
+                <label for="cPassword">Confirm Password</label>
+                <input type="password" id="cPassword" placeholder="Confirm your password" required />
+            </div>
+            <div class="form-group">
+                <label for="country">Region</label>
+                <select id="country" required>
+                    <option value="">Select your region</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                </select>
+            </div>
+            <div id="privacyAndAgreement">
+                <div>
+                    <input type="checkbox" required />
+                </div>
+                <div>
+                    I agree to the
+                    <a href="#" target="_blank">Privacy & Cookie Policy</a> and
+                    <a href="#" target="_blank">Terms & Conditions</a>.
+                </div>
+            </div>
+            <input class="buttont" type="submit" value="REGISTER" />
+        </form>
+
+        <!-- Social Login Options -->
+        <div class="social-login">
+            <button id="gmail">Login with Gmail</button>
+            <button id="facebook">Login with Facebook</button>
         </div>
-        <input class="buttont"type="submit"value="REGISTER"/>
-    </form>
-</div>
+
+        <!-- Forgot Password -->
+        <div>
+            <a href="#" id="forgetPassword">Forgot Password?</a>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="../public/js/signup.js"></script>
 </body>
-<script src="../public/js/signup.js"></script>
 </html>
