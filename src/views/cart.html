@@ -1,59 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My Cart</title>
-
-    <link rel="stylesheet" href="../../public/css/cart.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="cart-container">
-
         <h1>My Cart</h1>
-
         <ul id="cart-items" class="cart-items">
-
             <!-- Items will be dynamically added here -->
-
         </ul>
-
         <div class="cart-total">
-
             <strong>Total:</strong>
-
             <span id="cart-total">$0.00</span>
-
         </div>
-
         <button onclick="goToCheckout()" class="checkout-btn">Proceed to Checkout</button>
-
     </div>
-
-
 
     <div class="add-item-container">
-
         <h2>Add Item</h2>
-
         <form id="add-item-form">
-
             <input type="text" id="item-name" placeholder="Item Name" required>
-
             <input type="number" id="item-price" placeholder="Item Price" step="0.01" required>
-
             <button type="submit" class="submit-btn">Add to Cart</button>
-
         </form>
-
     </div>
 
-    <script src="../../public/js/cart.js"></script>
+    <div class="promo-container">
+        <h2>Special Offer</h2>
+        <div class="promo-item">
+            <p><strong>Ad Item:</strong> Limited Edition Product</p>
+            <p>Price: $25.00</p>
+            <button onclick="addPromoItem()" class="promo-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="mycartscript.js"></script>
