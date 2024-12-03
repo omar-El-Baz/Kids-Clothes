@@ -1,1 +1,82 @@
-
+*{
+	padding-top: 0%;
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-top: 0%;
+}
+body{
+    background-color: #FFDBB5;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+header {
+    background-color: #603F26;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#signup {
+	width: 40%;
+	margin: auto;
+	height: 100%;
+	font-weight: bold;
+	justify-content: flex-end;
+}
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #603F26;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.button {
+	margin-top: 20px;
+	width: 100%;
+	background-color: #FFDBB5;
+	color: #603F26;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	justify-content: flex-end;
+	align-items: center;
+}
+.button:hover {
+	background-color: rgb(87, 84, 84);
+}
+.userInput {
+	width: 97.5%;
+	height: 30px;
+}
+.text {
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #6C4E31;
+}
+#signupBtn > select {
+	margin-bottom: 25px;
+}
+#signupBtn > div {
+	margin-bottom: 22px;
+}
+#privacyAndAgreement {
+	display: flex;
+	gap: 5px;
+	cursor: pointer;
+	font-size: 18px;
+}
+#privacyAndAgreement > div {
+	color: #81807e;
+}
+#privacyAndAgreement > div > input {
+	cursor: pointer;
+}
+#privacyAndAgreement > div > a {
+	text-decoration: none;
+	color: #3272bb;
+}
