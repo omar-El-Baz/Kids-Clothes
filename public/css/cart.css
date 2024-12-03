@@ -85,7 +85,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Cart Container */
 .cart-container {
-    background: var(--beige);
+     background: var(--soft-cream);
     border: 1px solid var(--muted-green);
     padding: 20px;
     border-radius: 8px;
