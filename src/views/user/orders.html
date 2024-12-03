@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="public/css/user-orders.css">
+</head>
+<body>
+    <header>
+        <h1>My Orders</h1>
+    </header>
+    <main>
+        <section id="orders-section">
+            <h2>Order History</h2>
+            <div class="order">
+                <div class="order-header">
+                    <h3>Order ID: #12345</h3>
+                    <p>Date: 2024-12-01</p>
+                </div>
+                <div class="order-body">
+                    <ul>
+                        <li>Item: Product A (Qty: 1)</li>
+                        <li>Item: Product B (Qty: 2)</li>
+                    </ul>
+                    <p>Status: <span class="status delivered">Delivered</span></p>
+                    <button class="toggle-details">View Details</button>
+                    <div class="order-details hidden">
+                        <p>Payment Method: Credit Card</p>
+                        <p>Total Price: $100</p>
+                        <p>Shipping Address: 12 Street, City</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more orders here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Little Wardrobe Website</p>
+    </footer>
+    <script src="public/js/user-orders.js"></script>
+</body>
+</html>
+<!-- .... -->
