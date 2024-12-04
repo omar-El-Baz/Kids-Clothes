@@ -3,17 +3,17 @@ const emptyMessage = document.getElementById('emptyMessage');
 const wishlistContainer = document.getElementById('wishlistContainer');
 const wishlistItemsContainer = document.querySelector('.wishlist-items');
 function removeFromWishlist(name) {
-   wishlist = wishlist.filter(item => item.title !== name); // Remove the item
-   localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update localStorage
-   updateWishlist(); // Refresh the display
+   wishlist = wishlist.filter(item => item.title !== name); 
+   localStorage.setItem('wishlist', JSON.stringify(wishlist)); 
+   updateWishlist(); 
 }
 function updateWishlist() {
    if (wishlist.length === 0) {
-       emptyMessage.style.display = 'flex'; // Show empty message
-       wishlistContainer.style.display = 'none'; // Hide wishlist container
+       emptyMessage.style.display = 'flex'; 
+       wishlistContainer.style.display = 'none'; 
    } else {
-       emptyMessage.style.display = 'none'; // Hide empty message
-       wishlistContainer.style.display = 'block'; // Show wishlist container
+       emptyMessage.style.display = 'none'; 
+       wishlistContainer.style.display = 'block'; 
        wishlistItemsContainer.innerHTML = wishlist
            .map(
                item => `
@@ -27,5 +27,4 @@ function updateWishlist() {
            .join('');
    }
 }
-// Load the wishlist when the page is loaded
 updateWishlist();
