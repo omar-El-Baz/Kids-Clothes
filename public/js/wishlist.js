@@ -1,31 +1,29 @@
-let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-const emptyMessage = document.getElementById('emptyMessage');
-const wishlistContainer = document.getElementById('wishlistContainer');
-const wishlistItemsContainer = document.querySelector('.wishlist-items');
-function removeFromWishlist(name) {
-   wishlist = wishlist.filter(item => item.title !== name); // Remove the item
-   localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update localStorage
-   updateWishlist(); // Refresh the display
-}
-function updateWishlist() {
-   if (wishlist.length === 0) {
-       emptyMessage.style.display = 'flex'; // Show empty message
-       wishlistContainer.style.display = 'none'; // Hide wishlist container
+let wishlist = [];
+let cart = [];
+const addToCartButton = document.getElementById('addToCart');
+const addToFavoriteButton = document.getElementById('addToFavorite');
+const product = {
+   title: document.querySelector('.product-title').textContent,
+   price: document.querySelector('.current-price').textContent,
+   imgSrc: document.querySelector('.product-image img').src,
+};
+function addToCart() {
+   if (!cart.some(item => item.title === product.title)) {
+       cart.push(product);
+       alert(`${product.title} has been added to your cart.`);
    } else {
-       emptyMessage.style.display = 'none'; // Hide empty message
-       wishlistContainer.style.display = 'block'; // Show wishlist container
-       wishlistItemsContainer.innerHTML = wishlist
-           .map(
-               item => `
-<div class="wishlist-item">
-<img src="${item.imgSrc}" alt="${item.title}">
-<p>${item.title}</p>
-<p class="price">${item.price}</p>
-<button class="remove-button" onclick="removeFromWishlist('${item.title}')">Remove</button>
-</div>`
-           )
-           .join('');
+       alert(`${product.title} is already in your cart.`);
    }
+   console.log("Cart:", cart);
 }
-// Load the wishlist when the page is loaded
-updateWishlist();
+function addToWishlist() {
+   if (!wishlist.some(item => item.title === product.title)) {
+       wishlist.push(product);
+       alert(`${product.title} has been added to your wishlist.`);
+   } else {
+       alert(`${product.title} is already in your wishlist.`);
+   }
+   console.log("Wishlist:", wishlist);
+}
+addToCartButton.addEventListener('click', addToCart);
+addToFavoriteButton.addEventListener('click', addToWishlist);
