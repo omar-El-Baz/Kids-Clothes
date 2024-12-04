@@ -36,7 +36,7 @@ function renderCart() {
         total += price * quantity;
     });
 
-    cartTotalElement.textContent = `$${total.toFixed(2)}`;
+cartTotalElement.textContent = `${total.toFixed(2)} EGP`;
     saveCart();
 }
 
