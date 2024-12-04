@@ -1,4 +1,3 @@
-
 // Function to clean and parse price strings like "1,349.00 EGP"
 function cleanPrice(priceString) {
     // Remove non-numeric characters except for dots and commas
@@ -7,6 +6,7 @@ function cleanPrice(priceString) {
     const normalized = cleaned.replace(/,/g, '');
     return parseFloat(normalized); // Convert to a number
 }
+
 // Retrieve cart data from localStorage or initialize an empty array
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -57,13 +57,20 @@ function addItem(event) {
     event.preventDefault(); // Prevent form submission
 
     const itemName = document.getElementById("item-name").value.trim();
-    const itemPrice = parseFloat(document.getElementById("item-price").value);
+    const itemPrice = document.getElementById("item-price").value.trim();
     const itemQuantity = parseInt(document.getElementById("item-quantity").value) || 1;
 
-    if (itemName && !isNaN(itemPrice) && itemPrice > 0 && itemQuantity > 0) {
-        cartData.push({ name: itemName, price: itemPrice, quantity: itemQuantity });
-        renderCart();
-        document.getElementById("add-item-form").reset(); // Clear the form
+    if (itemName && itemPrice && itemQuantity > 0) {
+        // Clean price before adding the item
+        const cleanedPrice = cleanPrice(itemPrice);
+
+        if (!isNaN(cleanedPrice) && cleanedPrice > 0) {
+            cartData.push({ title: itemName, price: itemPrice, quantity: itemQuantity });
+            renderCart();
+            document.getElementById("add-item-form").reset(); // Clear the form
+        } else {
+            alert("Please enter a valid price.");
+        }
     } else {
         alert("Please enter a valid name, price, and quantity.");
     }
