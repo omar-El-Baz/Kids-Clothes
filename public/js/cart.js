@@ -26,6 +26,7 @@ function renderCart() {
         li.className = "cart-item";
         li.innerHTML = `
              <span>${item.title}</span>
+             <span>${item.size}</span>
     <span>${price.toFixed(2)} EGP</span>
     <input type="number" class="quantity-input" min="1" value="${quantity}" 
            onchange="updateQuantity(${index}, this.value)">
