@@ -10,18 +10,21 @@ function renderCart() {
 
     let total = 0;
     cartData.forEach((item, index) => {
+        const price = parseFloat(item.price); // Ensure the price is treated as a number
+        const quantity = parseInt(item.quantity); // Ensure the quantity is treated as a number
+
         const li = document.createElement("li");
         li.className = "cart-item";
         li.innerHTML = `
             <span>${item.name}</span>
-            <span>$${item.price.toFixed(2)}</span>
-            <input type="number" class="quantity-input" min="1" value="${item.quantity}" 
+            <span>$${price.toFixed(2)}</span>
+            <input type="number" class="quantity-input" min="1" value="${quantity}" 
                    onchange="updateQuantity(${index}, this.value)">
-            <span>Subtotal: $${(item.price * item.quantity).toFixed(2)}</span>
+            <span>Subtotal: $${(price * quantity).toFixed(2)}</span>
             <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         `;
         cartItemsContainer.appendChild(li);
-        total += item.price * item.quantity;
+        total += price * quantity;
     });
 
     cartTotalElement.textContent = `$${total.toFixed(2)}`;
