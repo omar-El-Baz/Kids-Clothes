@@ -1,6 +1,7 @@
 document.getElementById('checkout-form').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Payment successful! Thank you for your purchase.');
+     window.location.href = "../../../index.html"; // Redirect to index.html
 });
 function goToCheckout() {
     window.location.href = "checkout.html";
