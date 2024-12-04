@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Details - Little Wardrobe</title>
+    <link rel="icon" type="image/x-icon" href="./public/images/baby-boy.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/user-perosnal-details.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Your Account - Little Wardrobe</h1>
+    <header class="header">
+        <div class="logo">
+            <a href="../../../index.html"><img src="../../../public/images/baby-boy.svg" alt="Logo"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img src="../../../public/images/user.svg" width="30" height="30">
+                <div class="icon-dropdown">
+                    <a href="../user/profile.html">profile</a>
+                    <a href="../user/orders.html">orders</a>
+                </div>
+            </div>
+            <div class="icon"><a href="../auth/"><img src="../../../public/images/login.png" width="30" height="30">
+                </a></div>
+            <div class="icon"><a href="../wishlist.html"><img src="../../../public/images/e-commerce.svg" width="30"
+                        height="30"> </a></div>
+            <div class="icon"><a href="../cart.html"><img src="../../../public/images/shopping-cart.svg" width="30"
+                        height="30"> </a></div>
+        </div>
     </header>
-    
+    <nav class="categories">
+        <div class="dropdown">
+            <button class="dropbtn">Boys</button>
+            <div class="dropdown-content">
+                <a href="../filter.html">T-Shirts</a>
+                <a href="../filter.html">Shorts</a>
+                <a href="../filter.html">Accessories</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Girls</button>
+            <div class="dropdown-content">
+                <a href="../filter.html">Dresses</a>
+                <a href="../filter.html">Skirts</a>
+                <a href="../filter.html">Accessories</a>
+            </div>
+        </div>
+    </nav>
+
     <main>
         <section id="personal-details">
             <h2>Personal Details</h2>
             <div class="details-container">
-             
+
                 <div class="option">
                     <h3>Name</h3>
                     <p id="name-display">example</p>
@@ -26,7 +70,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="option">
                     <h3>Email</h3>
                     <p id="email-display">personname@example.com</p>
@@ -37,7 +81,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="option">
                     <h3>Address</h3>
                     <p id="address-display">123 Street, City</p>
@@ -48,14 +92,14 @@
                     </div>
                 </div>
 
-               
+
                 <div class="option">
                     <h3>Wishlist</h3>
                     <p>View and manage your wishlist.</p>
                     <button class="highlight" id="wishlist-btn">Go to Wishlist</button>
                 </div>
 
-               
+
                 <div class="option">
                     <h3>My Orders</h3>
                     <p>View your past orders.</p>
@@ -65,20 +109,43 @@
 
 
 
-<div class="option">
-    <h3>Sign Out</h3>
-    <p>Log out of your account.</p>
-    <button id="sign-out-btn">Sign Out</button>
-</div>
+                <div class="option">
+                    <h3>Sign Out</h3>
+                    <p>Log out of your account.</p>
+                    <button id="sign-out-btn">Sign Out</button>
+                </div>
 
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Little Wardrobe</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: aaa@sss.com</p>
+                <p>Phone: 123 456 7890</p>
+                <p>Address:</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="./index.html">Home</a>
+                <a href="./src/views/filter.html">Categories</a>
+                <a href="./src/views/user/orders.html">Orders</a>
+                <a href="./src/views/user/profile.html">Profile</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Clothing Store. All rights reserved.</p>
+        </div>
     </footer>
-
     <script src="../../../public/js/user-personal-details.js"></script>
 </body>
+
 </html>
