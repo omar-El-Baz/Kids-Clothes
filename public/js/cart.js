@@ -58,6 +58,7 @@ function addItem(event) {
     event.preventDefault(); // Prevent form submission
 
     const itemName = document.getElementById("item-name").value.trim();
+    const itemSize = document.getElementById("item-size").value.trim();
     const itemPrice = document.getElementById("item-price").value.trim();
     const itemQuantity = parseInt(document.getElementById("item-quantity").value) || 1;
 
@@ -66,7 +67,7 @@ function addItem(event) {
         const cleanedPrice = cleanPrice(itemPrice);
 
         if (!isNaN(cleanedPrice) && cleanedPrice > 0) {
-            cartData.push({ title: itemName, price: itemPrice, quantity: itemQuantity });
+            cartData.push({ title: itemName, price: itemPrice, quantity: itemQuantity,size: itemSize});
             renderCart();
             document.getElementById("add-item-form").reset(); // Clear the form
         } else {
