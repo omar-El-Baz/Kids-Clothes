@@ -10,8 +10,8 @@ function renderCart() {
 
     let total = 0;
     cartData.forEach((item, index) => {
-        const price = parseFloat(item.price); // Ensure the price is treated as a number
-        const quantity = parseInt(item.quantity); // Ensure the quantity is treated as a number
+        const price = parseFloat(item.price) || 0; // Ensure price is a valid number
+        const quantity = parseInt(item.quantity) || 1; // Ensure quantity is a valid number
 
         const li = document.createElement("li");
         li.className = "cart-item";
@@ -33,12 +33,13 @@ function renderCart() {
 
 // Function to update the quantity of an item
 function updateQuantity(index, newQuantity) {
-    newQuantity = parseInt(newQuantity);
-    if (newQuantity > 0) {
-        cartData[index].quantity = newQuantity;
+    const quantity = parseInt(newQuantity); // Ensure the new quantity is a valid number
+    if (!isNaN(quantity) && quantity > 0) {
+        cartData[index].quantity = quantity;
         renderCart();
     } else {
-        alert("Quantity must be 1 or greater.");
+        alert("Quantity must be a positive number.");
+        renderCart(); // Re-render to reset invalid changes
     }
 }
 
@@ -48,9 +49,9 @@ function addItem(event) {
 
     const itemName = document.getElementById("item-name").value.trim();
     const itemPrice = parseFloat(document.getElementById("item-price").value);
-    const itemQuantity = parseInt(document.getElementById("item-quantity").value);
+    const itemQuantity = parseInt(document.getElementById("item-quantity").value) || 1;
 
-    if (itemName && !isNaN(itemPrice) && itemQuantity > 0) {
+    if (itemName && !isNaN(itemPrice) && itemPrice > 0 && itemQuantity > 0) {
         cartData.push({ name: itemName, price: itemPrice, quantity: itemQuantity });
         renderCart();
         document.getElementById("add-item-form").reset(); // Clear the form
