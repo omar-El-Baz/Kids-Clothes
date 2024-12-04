@@ -25,11 +25,11 @@ function renderCart() {
         const li = document.createElement("li");
         li.className = "cart-item";
         li.innerHTML = `
-            <span>${item.title}</span>
-            <span>$${price.toFixed(2)}</span>
-            <input type="number" class="quantity-input" min="1" value="${quantity}" 
-                   onchange="updateQuantity(${index}, this.value)">
-            <span>Subtotal: $${(price * quantity).toFixed(2)}</span>
+             <span>${item.title}</span>
+    <span>${price.toFixed(2)} EGP</span>
+    <input type="number" class="quantity-input" min="1" value="${quantity}" 
+           onchange="updateQuantity(${index}, this.value)">
+    <span>Subtotal: ${(price * quantity).toFixed(2)} EGP</span>
             <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         `;
         cartItemsContainer.appendChild(li);
