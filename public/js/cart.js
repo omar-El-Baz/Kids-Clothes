@@ -13,7 +13,7 @@ function renderCart() {
         const li = document.createElement("li");
         li.className = "cart-item";
         li.innerHTML = `
-            <span>${item.title}</span>
+            <span>${item.name}</span>
             <span>$${item.price.toFixed(2)}</span>
             <input type="number" class="quantity-input" min="1" value="${item.quantity}" 
                    onchange="updateQuantity(${index}, this.value)">
@@ -80,4 +80,4 @@ function goToCheckout() {
 renderCart();
 
 // Add event listener for the Add Item form
-do
+document.getElementById("add-item-form").addEventListener("submit", addItem);
