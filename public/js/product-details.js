@@ -1,4 +1,3 @@
-// Wishlist Functionality
 
 function addToWishlist() {
 
@@ -21,8 +20,6 @@ function addToWishlist() {
     console.log("Wishlist:", wishlist);
 
 }
-
-// Cart Functionality
 
 function addToCart() {
 
