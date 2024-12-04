@@ -34,18 +34,6 @@ body {
   height: auto;
   margin-bottom: 10px;
 }
-.recommendation {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff2e1;
-}
- 
-.recommendation h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #444;
-  margin-bottom: 20px;
-}
 .photo-row {
   display: flex;
   justify-content: center;
