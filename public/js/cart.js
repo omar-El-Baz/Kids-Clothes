@@ -1,3 +1,12 @@
+
+// Function to clean and parse price strings like "1,349.00 EGP"
+function cleanPrice(priceString) {
+    // Remove non-numeric characters except for dots and commas
+    const cleaned = priceString.replace(/[^\d.,]/g, '');
+    // Replace commas with empty strings for consistent parsing
+    const normalized = cleaned.replace(/,/g, '');
+    return parseFloat(normalized); // Convert to a number
+}
 // Retrieve cart data from localStorage or initialize an empty array
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -10,7 +19,7 @@ function renderCart() {
 
     let total = 0;
     cartData.forEach((item, index) => {
-        const price = parseFloat(item.price) || 0; // Ensure price is a valid number
+        const price = cleanPrice(item.price) || 0; // Clean and parse the price
         const quantity = parseInt(item.quantity) || 1; // Ensure quantity is a valid number
 
         const li = document.createElement("li");
