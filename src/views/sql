@@ -1139,14 +1139,15 @@ INSERT INTO `warehouse` (`warehouse_id`, `warehouse_city`) VALUES
 (59, 'Whitby'),
 (60, 'Shipshaw');
 
-
 SELECT customer_name
 FROM customer
 WHERE customer_name LIKE 'Ma%'; 
+    
 SELECT DISTINCT shipment.order_id
 FROM shipment
 JOIN warehouse ON shipment.warehouse_id = warehouse.warehouse_id
 WHERE warehouse.warehouse_city = 'Arica'; 
+    
 SELECT shipment.order_id, 
        SUM(order_item.quantity * item.unit_price) AS total_price
 FROM shipment
@@ -1154,9 +1155,14 @@ JOIN order_item ON shipment.order_id = order_item.order_id
 JOIN item ON order_item.item_id = item.item_id
 WHERE shipment.warehouse_id = 8
 GROUP BY shipment.order_id; 
+    
 SELECT warehouse.warehouse_id, 
        warehouse.warehouse_city, 
-       COUNT(shipment.order_id) AS order_count                                                                  
+       COUNT(shipment.order_id) AS order_count
 FROM warehouse
 LEFT JOIN shipment ON warehouse.warehouse_id = shipment.warehouse_id
 GROUP BY warehouse.warehouse_id, warehouse.warehouse_city; 
+    
+SELECT item_id, unit_price
+FROM item
+WHERE item_id NOT IN (SELECT item_id FROM order_item); 
