@@ -1,23 +1,28 @@
+<!-- wishlist.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
-    <link rel="stylesheet" href="../../public/css/wishlist.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist</title>
+<link rel="stylesheet" href="../../public/css/wishlist.css">
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h2 class="head">MY WISHLIST</h2>
-
-    <div class="default" id="emptyMessage">
-        <img src="../../public/images/lovee.png" class="wishlist-icon" alt="Wishlist Icon">
-        <p>Your Wishlist Is Empty!</p>
-    </div>
-
-    <div id="wishlistContainer" style="display: none;">
-        <div class="wishlist-items"></div>
-    </div>
-
-    <script src="../../public/js/wishlist.js"></script>
+<h2 class="head">MY WISHLIST</h2>
+<div class="default" id="emptyMessage">
+<i class="fa-regular fa-heart wishlist-icon"></i>
+<p>Your Wishlist Is Empty!</p>
+<a href="../products/index.html" class="browse-link">Browse Products</a>
+</div>
+<div id="wishlistContainer" style="display: none;">
+<div class="wishlist-items"></div>
+</div>
+<!-- Add loading spinner -->
+<div id="loadingSpinner" class="loading-spinner" style="display: none;">
+<i class="fas fa-spinner fa-spin"></i>
+</div>
+<script src="../../public/js/wishlist.js"></script>
 </body>
 </html>
