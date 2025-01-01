@@ -1,90 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <link rel="stylesheet" href="../../public/css/product-details.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><?php echo $product['name']; ?> | Product Page</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="../../index.html"><img src="../../public/images/baby-boy.svg" alt="Logo"></a>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="icons">
-            <div class="icon">
-                <img src="../../public/images/user.svg" width="30" height="30">
-                <div class="icon-dropdown">
-                    <a href="./user/profile.html">profile</a>
-                    <a href="./user/orders.html">orders</a>
-                </div>
-            </div>
-            <div class="icon"><a href="./auth/signup.html"><img src="../../public/images/login.png" width="30"
-                        height="30"> </a></div>
-            <div class="icon"><a href="./wishlist.html"><img src="../../public/images/e-commerce.svg" width="30"
-                        height="30"> </a></div>
-            <div class="icon"><a href="./cart.html"><img src="../../public/images/shopping-cart.svg" width="30"
-                        height="30"> </a></div>
-        </div>
-    </header>
-    <nav class="categories">
-        <div class="dropdown">
-            <button class="dropbtn">Boys</button>
-            <div class="dropdown-content">
-                <a href="./filter.html">T-Shirts</a>
-                <a href="./filter.html">Shorts</a>
-                <a href="./filter.html">Accessories</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Girls</button>
-            <div class="dropdown-content">
-                <a href="./filter.html">Dresses</a>
-                <a href="./filter.html">Skirts</a>
-                <a href="./filter.html">Accessories</a>
-            </div>
-        </div>
-    </nav>
-    <div class="product-page">
-        <div class="product-image">
-            <img src="../../public/images/7b4f6ce4-2a3b-45aa-95af-d7ddfa235376.JPG" alt="Comfy dress">
-        </div>
-        <div class="product-details">
-            <h1 class="product-title">Comfy Girls Beige Short Dress</h1>
-            <p>Material: Cotton</p>
-
-            <p class="product-price">
-                <span class="current-price">1,349.00 EGP</span>
-                <span class="original-price">1,699.00 EGP</span>
-                <span class="discount">Save 21%</span>
-            </p>
-            <div class="size-selection">
-                <p>Choose Size</p>
-                <button class="size-button">5-6</button>
-                <button class="size-button">7-8</button>
-                <button class="size-button">9-10</button>
-                <button class="size-button">11-12</button>
-            </div>
-            <button class="order-button" id="addToCart">ADD TO CART</button>
-            <button class="order-button" id="addToFavorite">ADD TO FAVORITE</button>
-            <label for="size-chart" class="size-chart-button">Size Chart</label>
-            <input type="checkbox" id="size-chart" class="size-chart-checkbox">
-            <div class="size-chart-modal">
-                <label for="size-chart" class="close">&times;</label>
-                <img class="size-chart-image" src="../../public/images/PHOTO-2024-12-04-01-37-43.jpg" alt="Size Chart">
-            </div>
-            <div class="product-info">
-                <p><strong>Limited Offer:</strong> Free Delivery</p>
-                <p><strong>Guaranteed:</strong> Return & Exchange Policy</p>
-            </div>
-        </div>
-    </div>
-    <script src="../../public/js/product-details.js"></script>
+<div class="product-page">
+<h1 class="product-title"><?php echo $product['name']; ?></h1>
+<div class="image-gallery">
+<img src="<?php echo $product['image_path']; ?>" alt="<?php echo $product['name']; ?>" class="main-image">
+</div>
+<div class="price-container">
+<span class="current-price"><?php echo $product['current_price']; ?> EGP</span>
+<?php if ($product['original_price'] > $product['current_price']): ?>
+<span class="original-price"><?php echo $product['original_price']; ?> EGP</span>
+<?php endif; ?>
+</div>
+<div class="size-selection" data-sizes="<?php echo implode(',', $product['sizes']); ?>">
+<!-- Sizes will be loaded dynamically by JavaScript -->
+</div>
+<div class="actions">
+<button class="btn add-to-cart" data-product-id="<?php echo $product['id']; ?>">Add to Cart</button>
+<button class="btn add-to-wishlist" data-product-id="<?php echo $product['id']; ?>">Add to Wishlist</button>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
-
 </html>
