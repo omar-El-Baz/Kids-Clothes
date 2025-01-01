@@ -1,52 +1,34 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-const addToCartButton = document.getElementById('addToCart');
-const addToFavoriteButton = document.getElementById('addToFavorite');
-const sizeButtons = document.querySelectorAll('.size-button');
-let selectedSize = null;
-
-const product = {
-    title: document.querySelector('.product-title').textContent,
-    price: document.querySelector('.current-price').textContent,
-    imgSrc: document.querySelector('.product-image img').src,
-};
-
-// Function to select size
-sizeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        sizeButtons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-        selectedSize = button.textContent;
-    });
+// Dynamically load sizes and add interactivity
+document.addEventListener("DOMContentLoaded", () => {
+   const sizeContainer = document.querySelector(".size-selection");
+   const availableSizes = sizeContainer.dataset.sizes.split(",");
+   // Create size buttons dynamically
+   availableSizes.forEach(size => {
+       const sizeButton = document.createElement("button");
+       sizeButton.className = "size-button";
+       sizeButton.textContent = size;
+       sizeContainer.appendChild(sizeButton);
+       // Add click event to select a size
+       sizeButton.addEventListener("click", () => {
+           document.querySelectorAll(".size-button").forEach(btn => btn.classList.remove("selected"));
+           sizeButton.classList.add("selected");
+       });
+   });
+   // Add to Cart button event
+   document.querySelector(".add-to-cart").addEventListener("click", (e) => {
+       const productId = e.target.dataset.productId;
+       const selectedSize = document.querySelector(".size-button.selected")?.textContent;
+       if (!selectedSize) {
+           alert("Please select a size before adding to cart!");
+           return;
+       }
+       alert(`Product ID: ${productId}, Size: ${selectedSize} added to cart.`);
+       // Replace alert with AJAX call to add to cart
+   });
+   // Add to Wishlist button event
+   document.querySelector(".add-to-wishlist").addEventListener("click", (e) => {
+       const productId = e.target.dataset.productId;
+       alert(`Product ID: ${productId} added to wishlist.`);
+       // Replace alert with AJAX call to add to wishlist
+   });
 });
-
-function addToCart() {
-    if (!selectedSize) {
-        alert('Please select a size before adding to cart.');
-        return;
-    }
-
-    const cartProduct = { ...product, size: selectedSize };
-    if (!cart.some(item => item.title === cartProduct.title && item.size === cartProduct.size)) {
-        cart.push(cartProduct);
-     localStorage.setItem("cart", JSON.stringify(cart));
-        alert(`${cartProduct.title} (Size: ${cartProduct.size}) has been added to your cart.`);
-    } else {
-        alert(`${cartProduct.title} (Size: ${cartProduct.size}) is already in your cart.`);
-    }
-    console.log("Cart:", cart);
-}
-
-function addToWishlist() {
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    if (!wishlist.some(item => item.title === product.title)) {
-        wishlist.push(product);
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        alert(`${product.title} has been added to your wishlist.`);
-    } else {
-        alert(`${product.title} is already in your wishlist.`);
-    }
-    console.log("Wishlist:", wishlist);
-}
-
-addToCartButton.addEventListener('click', addToCart);
-addToFavoriteButton.addEventListener('click', addToWishlist);
